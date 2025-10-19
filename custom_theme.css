@@ -66,10 +66,19 @@ body .cm-content .cm-quote {
 
 /* --------- BACKGROUNDS --------- */
 /* Various backgrounds -> White */
+
 /* Top menu bar */
 body.linux #menubar {
   background-color: white;
-  /*background-color: #ddd;*/
+}
+/* Top menu deployed */
+body div.application-menu {
+  background-color: white;
+  border-radius: 8px;
+}
+
+body div#window-frame {
+  border: 1px solid #bbb;
 }
 
 /* Sidebars background */
