@@ -1,0 +1,274 @@
+/* --------- MAIN TEXT --------- /*
+/* Main text → Open Sans */
+body .main-editor-wrapper .cm-content {
+font-family: 'Open Sans', sans-serif;
+color: black;
+font-size: 1.05em;
+max-width: 1000px;
+margin: 0 auto; /* center horizontally */
+line-height: 1.6;
+}
+/* For HTML Export */
+body {
+font-family: 'Open Sans', sans-serif;
+font-size: 16px;
+line-height: 1.6;
+}
+mark, .highlight {
+background-color: yellow; /* highlight color */
+color: black; /* text color */
+}
+
+/* --------- HORITONTAL LINES --------- /*
+/* Horizontal lines "---": Full-width, thicker and grey horizontal lines
+Two "---" can also be concatenated (with line return in-between for even thicker lines.*/
+body .main-editor-wrapper .cm-hr {
+display: inline-block;
+width: 100vw;
+margin-left: 0;
+line-height: 0.2;
+background: #aaa;
+color: black;
+}
+
+
+/* --------- QUOTES --------- */
+/* Quotes with light grey background */
+body .cm-content .cm-quote {
+background: #f2f2f2; /* Light grey background */
+padding: 4px 0px; /* More vertical padding for highlight */
+}
+/* To make it visible when selected*/
+.cm-quote::selection {
+color: var(--selection-color, #00aa00); /* Darker green */
+}
+
+
+/* --------- EDITING AREA --------- /*
+/* Editing area: grey rounded rectangle around */
+.main-editor-wrapper .cm-editor .cm-scroller {
+border: 2px solid #ddd;
+border-radius: 8px;
+}
+/* Adjusting the space left to the text */
+.main-editor-wrapper:not(.code-file) .cm-editor .cm-gutters {
+width: 40px;
+}
+
+/* Bottom: information about word count etc */
+.cm-panels.cm-panels-bottom {
+background: white;
+border-top: none;
+}
+
+
+/* --------- HEADINGS --------- /*
+/* Changing the color of the "#" symbols of headings */
+.cm-content .cm-header-1.cm-code-mark.cm-meta,
+.cm-content .cm-header-2.cm-code-mark.cm-meta,
+.cm-content .cm-header-3.cm-code-mark.cm-meta,
+.cm-content .cm-header-4.cm-code-mark.cm-meta,
+.cm-content .cm-header-5.cm-code-mark.cm-meta,
+.cm-content .cm-header-6.cm-code-mark.cm-meta {
+color: #ddd; /* Light grey */
+}
+
+
+/* --------- BACKGROUNDS --------- */
+/* Various backgrounds -> White */
+
+/* Top menu bar */
+body.win32 #menubar {
+background-color: white;
+color: black;
+}
+/* Top menu deployed */
+body div.application-menu {
+background-color: white;
+border-radius: 8px;
+}
+
+/* Windows frame */
+body div#window-frame {
+border: 1px solid #bbb;
+}
+
+/* Left sidebar background */
+.main-window, .view {
+background-color: white;
+}
+
+/* Right sidebar background */
+body #sidebar {
+background-color: white;
+}
+
+
+/* Document tabs ribbon */
+body div.tab-container {
+background-color: white;
+border-bottom: 4px solid white;
+height: 40px;
+}
+
+/* Toolbar with button (settings, export...) */
+#window-chrome #toolbar {
+background-color: white;
+}
+
+
+/* --------- TABS --------- */
+/* Individual document tab */
+body.win32 div.tab-container div[role="tab"] {
+border-radius: 4px; /* top-left & top-right rounded */
+padding: 2px 10px;
+margin: 2px 2px;
+background-color: #eee;
+}
+
+/* Document tab that is not last */
+body.win32 div.tab-container div[role="tab"]:not(:last-child) {
+border-right: none;
+}
+
+/* Active document tab */
+body.win32 div.tab-container div[role="tab"].active {
+background-color: #ccc;
+color: black;
+border-bottom: none;
+}
+
+
+/* --------- RIGHT PANEL --------- */
+/* Individual right panel buttons */
+body.win32 .system-tablist .system-tab {
+background-color: #eee;
+border: none;
+margin: 0 4px;
+color: black !important; /* icon/text color */
+border-radius: 8px;
+}
+
+/* Active right panel button highlight (optional) */
+body.win32 .system-tablist .system-tab.active {
+background-color: #ccc; /* subtle highlight */
+/*background-color: white !important;*/
+color: black;
+}
+
+/* Hide the numeric part of TOC on right panel */
+.toc-entry-container .toc-level {
+display: none;
+}
+
+
+/* --------- BUTTONS --------- */
+/* Buttons */
+body.win32 div#toolbar button {
+background: #eee;
+border: none;
+border-radius: 8px;
+}
+/* Remove or shrink the large spacers before "Export" */
+#toolbar .spacer.spacer-3x {
+display: none;
+}
+
+/* Fila manager / Search button */
+body.win32 div#toolbar div.three-way-toggle.active {
+background: white;
+border: 1px solid black;
+border-radius: 8px
+}
+
+/* Toggle between file manager and search */
+#toolbar-toggle-file-manager.three-way-toggle {
+display: flex;
+}
+#toolbar-toggle-file-manager.three-way-toggle button {
+background: white !important;
+}
+#toolbar-toggle-file-manager.three-way-toggle button.active {
+background: #e0e0e0 !important;
+}
+
+/* Pomodoro and toggle right sidebar button */
+body.win32 div#toolbar button#toolbar-pomodoro,
+body.win32 div#toolbar button#toolbar-toggle-sidebar {
+background: white;
+}
+
+
+/* --------- LEFT PANEL --------- */
+/* Hide the “Files” header and the horizontal line below it */
+#directories-files-header {
+display: none;
+}
+
+/* Filter input */
+body #file-manager .file-manager-filter .file-manager-filter-input {
+background: white;
+border: 1px solid #ddd;
+}
+
+/* Border of the right panel */
+body div.split-view div.view.view-border {
+border-left: none; /* adjust color and thickness */
+}
+
+/* Hide icon of file explorer (empty space) */
+body div.tree-item-container .tree-item .item-icon,
+body div.tree-item-container .tree-item .toggle-icon {
+display: none;
+}
+
+/* --------- SCROLLBAR --------- */
+/* Scrollbar */
+::-webkit-scrollbar {
+width: 12px;
+height: 12px;
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+background: #ababab;
+border-radius: 10px;
+border: 2px solid transparent;
+background-clip: padding-box;
+}
+
+/* Scrollbar thumd style on hover */
+::-webkit-scrollbar-thumb:hover{
+border: 0;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+background: white;
+}
+
+/* Scrollbar arrow buttons */
+::-webkit-scrollbar-button {
+background-color: white ! important; /* white background */
+}
+
+/* Scrollbar button style on hover */
+::-webkit-scrollbar-button:hover {
+background-color: #e0e0e0 !important; /* light grey on hover */
+}
+
+/* Scrollbar button when pressed */
+::-webkit-scrollbar-button:active {
+background-color: #d0d0d0 !important; /* darker when pressed */
+}
+
+/* --------- CUSTOM HTML --------- */
+/* Custom: Rounded block */
+.z-callout {
+border: 1px solid var(--color-border-muted);
+border-radius: 10px;
+padding: 10px 12px;
+display: inline-block; /* or block to span full width */
+background: var(--color-neutral-muted); /* uses Zettlr theme variables */
+box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
