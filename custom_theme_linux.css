@@ -1,4 +1,4 @@
-/* --------- MAIN TEXT --------- /*
+/* --------- MAIN TEXT --------- */
 /* Main text → Open Sans */
 body .main-editor-wrapper .cm-content {
   font-family: 'Open Sans', sans-serif;
@@ -8,8 +8,18 @@ body .main-editor-wrapper .cm-content {
   margin: 0 auto;           /* center horizontally */
   line-height: 1.6;
 }
+/* For HTML Export */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+mark, .highlight {
+  background-color: yellow;   /* highlight color */
+  color: black;               /* text color */
+}
 
-/* --------- HORITONTAL LINES --------- /*
+/* --------- HORITONTAL LINES --------- */
 /* Horizontal lines "---": Full-width, thicker and grey horizontal lines
 Two "---" can also be concatenated  (with line return in-between for even thicker lines.*/
 body .main-editor-wrapper .cm-hr {
@@ -22,7 +32,7 @@ body .main-editor-wrapper .cm-hr {
 }
 
 
-/* --------- QUOTES --------- /*
+/* --------- QUOTES --------- */
 /* Quotes with light grey background */
 body .cm-content .cm-quote {
   background: #f2f2f2; /* Light grey background */
@@ -34,7 +44,7 @@ body .cm-content .cm-quote {
 }
 
 
-/* --------- EDITING AREA --------- /*
+/* --------- EDITING AREA --------- */
 /* Editing area: grey rounded rectangle around */
 .main-editor-wrapper .cm-editor .cm-scroller {
   border: 2px solid #ddd;
@@ -52,7 +62,7 @@ body .cm-content .cm-quote {
 }
 
 
-/* --------- HEADINGS --------- /*
+/* --------- HEADINGS --------- */
 /* Changing the color of the "#" symbols of headings */
 .cm-content .cm-header-1.cm-code-mark.cm-meta,
 .cm-content .cm-header-2.cm-code-mark.cm-meta,
@@ -147,12 +157,36 @@ body.linux div.tab-container div[role="tab"].active {
 body.linux div#toolbar button {
   background: #eee;
   border: none;
+  border-radius: 8px;
 }
 /* Remove or shrink the large spacers before "Export" */
 #toolbar .spacer.spacer-3x {
   display: none;
 }
 
+/* File manager / Search button */
+body.linux div#toolbar div.three-way-toggle.active {
+  background: white;
+  border: 1px solid black;
+  border-radius: 6px
+}
+
+/* Toggle between file manager and search */
+#toolbar-toggle-file-manager.three-way-toggle {
+display: flex;
+}
+#toolbar-toggle-file-manager.three-way-toggle button {
+background: white !important;
+}
+#toolbar-toggle-file-manager.three-way-toggle button.active {
+background: #e0e0e0 !important;
+}
+
+/* Pomodoro and toggle right sidebar button */
+body div#toolbar button#toolbar-pomodoro,
+body div#toolbar button#toolbar-toggle-sidebar {
+  background: white;
+}
 
 /* --------- LEFT PANEL --------- */
 /* Hide the “Files” header and the horizontal line below it */
@@ -172,7 +206,7 @@ body div.split-view div.view.view-border {
 }
 
 /* Hide icon of file explorer (empty space) */
-body div.tree-item-container .tree-item .item-icon, 
+body div.tree-item-container .tree-item .item-icon,
 body div.tree-item-container .tree-item .toggle-icon {
   display: none;
 }
