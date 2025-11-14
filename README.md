@@ -28,6 +28,8 @@ Here is a non-exhaustive of the things that are overridden with this custom CSS 
 4. Save
 The changes should immediately be applied.
 
+In case you want to use the font I recommend (Open-Sans), feel free to download it there: https://fonts.google.com/specimen/Open+Sans, and install it on your computer.
+
 ## ⚠️ Disclaimer
 I am using Linux Fedora 42 KDE, Zettlr version 3.6.0 installed from Flatpak. I am using in light theme. Any deviation from this might not render the theme correctly. I also created a version for Windows which should render mostly the same.
 
